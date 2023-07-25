@@ -1,24 +1,25 @@
 <template>
   <div id="app">
-    <InputComponent /> <SignComponent /> <InputComponent /> <SignComponent /> <InputComponent /> <EqualComponent />
+    <!-- <InputComponent /> <SignComponent /> <InputComponent /> <SignComponent /> <InputComponent />  -->
+    <!-- <EqualComponent /> -->
     <hr>
     <OutputComponent />
   </div>
 </template>
 
 <script>
-import InputComponent from "@/components/InputComponent.vue";
-import SignComponent from "@/components/SignComponent.vue";
+// import InputComponent from "@/components/InputComponent.vue";
+// import SignComponent from "@/components/SignComponent.vue";
 import OutputComponent from "@/components/OutputComponent.vue";
-import EqualComponent from "@/components/EqualComponent.vue";
+// import EqualComponent from "@/components/EqualComponent.vue";
 
 export default {
   name: 'App',
   components: {
-    InputComponent,
-    SignComponent,
+    // InputComponent,
+    // SignComponent,
     OutputComponent,
-    EqualComponent
+    // EqualComponent
   }
 }
 </script>

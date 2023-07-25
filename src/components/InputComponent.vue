@@ -1,28 +1,42 @@
 <template>
-    <div>
-        <input 
-        :value = "inputValue" 
-        v-on:input="changeValue"
+    <div class="inputComponent">
+        <input class="inputDiv"
+        v-model = "inputValue" 
+        
         type="number" 
-        placeholder="число" />
-        {{ inputValue }}
+        placeholder="0" />
+        <!-- {{ animatedInputValue }}    -->
     </div>
 </template>
+<script src="https://cdn.jsdelivr.net/npm/tween.js@16.3.4"></script>
 <script>
 export default {
     name: 'InputComponent',
     data () {
         return {
-            inputValue: 0
+            inputValue: 0,
+            animatedInputValue: 0
         }
     },
     methods: {
         changeValue(event) {
             this.inputValue = event.target.value
         }
+    },
+    watch: {
+        inputValue: function(newInputValue) {
+            this.$emit("inputValue", newInputValue)
+            
+        }
     }
 }
 </script>
 <style>
-    
+    .inputComponent {
+        margin-right: 10px;
+    }
+    .inputDiv {
+        width: 50px;
+        
+    }
 </style>

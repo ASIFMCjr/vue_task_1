@@ -1,8 +1,8 @@
 <template>
     <div class="inputComponent">
         <input class="inputDiv"
-        v-model = "inputValue" 
-        
+        v-model.number = "inputValue" 
+        step="10"
         type="number" 
         placeholder="0" />
         <!-- {{ animatedInputValue }}    -->
@@ -28,7 +28,12 @@ export default {
             this.$emit("inputValue", newInputValue)
             
         }
+    },
+    computed: {
+        inputValue() {
+      return this.text || 0
     }
+  }
 }
 </script>
 <style>

@@ -1,8 +1,5 @@
 <template>
   <div id="app">
-    <!-- <InputComponent /> <SignComponent /> <InputComponent /> <SignComponent /> <InputComponent />  -->
-    <!-- <EqualComponent /> -->
-    <hr>
     <OutputComponent />
   </div>
 </template>
